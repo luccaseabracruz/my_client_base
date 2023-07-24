@@ -1,2 +1,2 @@
-# my_client_base
+# My Customer Base
 An application to save your clients contacts and information.
