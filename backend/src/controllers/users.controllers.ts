@@ -1,14 +1,8 @@
 import { Request, Response } from "express";
-import { User } from "../entities/user.entities";
-import { userResponseSchema } from "../schemas/users.schemas";
-import {
-  TUpdateUserRequest,
-  TUserRequest,
-  TUserResponse,
-} from "../interfaces/users.interfaces";
+import { TUserRequest, TUserResponse } from "../interfaces/users.interfaces";
 import createUserService from "../services/users/createUser.service";
 import listUsersService from "../services/users/listUsers.service";
-import deleteUserService from "../services/deleteUser.service";
+import deleteUserService from "../services/users/deleteUser.service";
 import retrieveUserService from "../services/users/retrieveUser.service";
 import updateUserService from "../services/users/updateUser.service";
 

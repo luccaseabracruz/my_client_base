@@ -10,7 +10,6 @@ const ensureIdExistsMiddelware = async (
   next: NextFunction
 ): Promise<void> => {
   const userId: number = parseInt(req.params.id);
-
   const usersRepository: Repository<User> = AppDataSource.getRepository(User);
   const user: User | null = await usersRepository.findOneBy({ id: userId });
 
