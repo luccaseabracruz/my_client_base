@@ -1,14 +1,15 @@
-import express, { Application, json, Request, Response } from "express";
+import "express-async-errors";
+import express, { Application } from "express";
+import { userRoutes } from "./routes/users.routes";
+import handleErrors from "./errors/handleErrors.errors";
+import { loginRoutes } from "./routes/login.routes";
 
 const app: Application = express();
 app.use(express.json());
 
-// app.post("/users", (req: Request, res: Response): Response => {
-//   return res.status(201).json(req.body);
-// });
+app.use("/users", userRoutes);
+app.use("/login", loginRoutes);
 
-const PORT: number = 3000;
-const runningMsg: string = `Example app listening on port ${PORT}`;
-app.listen(PORT, () => {
-  console.log(runningMsg);
-});
+app.use(handleErrors);
+
+export default app;
