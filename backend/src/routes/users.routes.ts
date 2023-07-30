@@ -4,6 +4,7 @@ import {
   deleteUserController,
   listUsersController,
   retrieveUserController,
+  selfDataController,
   updateUserController,
 } from "../controllers/users.controllers";
 import validateUniqueEmailMiddleware from "../middlewares/validateUniqueEmail.middleware";
@@ -33,6 +34,7 @@ userRoutes.get(
   ensureIsAdminMiddleware,
   listUsersController
 );
+userRoutes.get("/self", validateTokenMiddleware, selfDataController);
 userRoutes.get(
   "/:id",
   ensureIdExistsMiddelware,

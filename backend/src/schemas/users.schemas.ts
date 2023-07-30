@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { contactSchema } from "./contacts.schemas";
 
 const userSchema = z.object({
   id: z.number(),
@@ -22,9 +23,14 @@ const userResponseSchema = userSchema.omit({ password: true });
 
 const updateUserRequestSchema = userRequestSchema.partial();
 
+const userWithContactsSchema = userResponseSchema.extend({
+  contacts: z.array(contactSchema),
+});
+
 export {
   userSchema,
   userRequestSchema,
   userResponseSchema,
   updateUserRequestSchema,
+  userWithContactsSchema,
 };
