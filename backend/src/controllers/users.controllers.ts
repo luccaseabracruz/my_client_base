@@ -5,6 +5,8 @@ import listUsersService from "../services/users/listUsers.service";
 import deleteUserService from "../services/users/deleteUser.service";
 import retrieveUserService from "../services/users/retrieveUser.service";
 import updateUserService from "../services/users/updateUser.service";
+import { retrieveSelfDataService } from "../services/users/retrieveSelfData.service";
+import { User } from "../entities/user.entities";
 
 const createUserController = async (
   req: Request,
@@ -22,6 +24,16 @@ const listUsersController = async (
 ): Promise<Response> => {
   const users: TUserResponse[] = await listUsersService();
   return res.status(200).json(users);
+};
+
+const selfDataController = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
+  const userId: number = parseInt(res.locals.userId);
+  const user: User = await retrieveSelfDataService(userId);
+
+  return res.status(200).json(user);
 };
 
 const retrieveUserController = async (
@@ -61,6 +73,7 @@ const deleteUserController = async (
 export {
   createUserController,
   listUsersController,
+  selfDataController,
   retrieveUserController,
   updateUserController,
   deleteUserController,

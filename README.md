@@ -29,20 +29,24 @@ An application to save your clients contacts and information.
 
 ### Starting frontend
 
+    X. On your terminal:
+        $ cd ./frontend (to enter the frontend folder)
+        $ npm install (to install all the dependencies)
+        $ npm run dev (to check if it running properly)
+
 ### Endpoints:
 
-| Method | Endpoint                   | Description                                       | Authentication                     |
-| ------ | -------------------------- | ------------------------------------------------- | ---------------------------------- |
-| POST   | /users                     | Create user                                       | Any user, token is not required    |
-| GET    | /users                     | List all users                                    | Just admin user                    |
-| GET    | /users/:id                 | Retrieve user data                                | Just admin user or account owner   |
-| PATCH  | /users/:id                 | Update user                                       | Just admin user or account owner   |
-| DELETE | /users/:id                 | Delete user                                       | Just admin user or account owner   |
-| POST   | /login                     | Generate authentication token                     | Any user, token is not required    |
-| POST   | /categories                | Criação de categoria                              | Just admin user                    |
-| GET    | /categories                | Lista todas as categorias                         | Any user, token is not required    |
-| GET    | /categories/:id/realEstate | Lista todos imóveis que pertencem a uma categoria | Any user, token is not required    |
-| POST   | /realEstate                | Criação de um imóvel                              | Just admin user                    |
-| GET    | /realEstate                | Lista todos os imóveis                            | Any user, token is not required    |
-| POST   | /schedules                 | Agenda uma visita a um imóvel                     | Registered User, token is required |
-| GET    | /schedules/realEstate/:id  | lista todos os agendamentos de um imóvel          | Just admin user                    |
+| Method | Endpoint                       | Description                   | Authentication                   |
+| ------ | ------------------------------ | ----------------------------- | -------------------------------- |
+| POST   | /users                         | Create user                   | Any user, token is not required  |
+| GET    | /users                         | List all users                | Just admin user                  |
+| GET    | /users/self                    | Retrieve self user data       | Any user, token is not required  |
+| GET    | /users/:id                     | Retrieve user data            | Just admin user or account owner |
+| PATCH  | /users/:id                     | Update user                   | Just admin user or account owner |
+| DELETE | /users/:id                     | Delete user                   | Just admin user or account owner |
+| POST   | /login                         | Generate authentication token | Any user, token is not required  |
+| POST   | /users/:id/contacts            | Contact creation              | Just admin user or account owner |
+| GET    | /users/:id/contacts            | List user contacts            | Just admin user or account owner |
+| GET    | /users/:id/contacts/:contactId | Retrieve contact by id        | Just admin user or contact owner |
+| PATCH  | /users/:id/contacts/:contactId | Update contact by id          | Just admin user or contact owner |
+| DELETE | /users/:id/contacts/:contactId | Delete contact by id          | Just admin user or contact owner |

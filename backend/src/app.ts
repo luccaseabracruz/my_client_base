@@ -4,9 +4,16 @@ import { userRoutes } from "./routes/users.routes";
 import handleErrors from "./errors/handleErrors.errors";
 import { loginRoutes } from "./routes/login.routes";
 import { contactsRoutes } from "./routes/contacts.routes";
+import cors from "cors";
 
 const app: Application = express();
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 app.use("/users", userRoutes);
 app.use("/login", loginRoutes);
