@@ -1,0 +1,6 @@
+# backend
+node_modules/
+dist/
+yarn.lock
+.env
+.vscode
