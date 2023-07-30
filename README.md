@@ -12,29 +12,33 @@ An application to save your clients contacts and information.
         $ psql
         $ CREATE DATABASE <your_db_name>;
 
-    X. Fork this repository to your Github
+    2. Fork this repository to your Github
 
-    2. Clone the forked repository on your machine.
+    3. Clone the forked repository on your machine.
         $ git clone <ssh_key>
 
-    X. On your terminal:
+    4. On your terminal:
         $ cd ./backend (to enter the backend folder)
         $ npm install (to install all the dependencies)
 
-    3. Populate the .env file with your the required information.
+    5. Populate the .env file with your the required information.
         $ npm run dev (to check if it is running properly)
 
-    4. Migrate all the existent migrations with the following command:
+    6. Migrate all the existent migrations with the following command:
         $ npm run typeorm migration:run -- -d src/data-source
 
 ### Starting frontend
 
-    X. On your terminal:
+    1. On your terminal:
         $ cd ./frontend (to enter the frontend folder)
         $ npm install (to install all the dependencies)
         $ npm run dev (to check if it running properly)
 
-### Endpoints:
+    2. Enter the link provided on the terminal with cntrl + click, register your account and enjoy the app.
+
+    OBS: remember to run the backend and frontend simutaneously.
+
+### API Endpoints:
 
 | Method | Endpoint                       | Description                   | Authentication                   |
 | ------ | ------------------------------ | ----------------------------- | -------------------------------- |
