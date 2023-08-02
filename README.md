@@ -11,7 +11,7 @@ An application to save your clients contacts and information.
         $ npm install (to install all the dependencies)
         $ npm run dev (to check if it running properly)
 
-    2. Pass the Local url provided in the terminal to the VITE_URL Env variable.
+    2. Pass the Local url provided in the terminal to the VITE_URL Env variable on the backend folder.
         ATTENTION: the url must be without "/" in the end!!!!!
 
 ### Starting backend
