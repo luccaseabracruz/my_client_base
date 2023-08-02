@@ -5,13 +5,20 @@ import handleErrors from "./errors/handleErrors.errors";
 import { loginRoutes } from "./routes/login.routes";
 import { contactsRoutes } from "./routes/contacts.routes";
 import cors from "cors";
+import "dotenv/config";
 
 const app: Application = express();
 app.use(express.json());
 
+const viteUrl: string | undefined = process.env.VITE_URL;
+
+if (!viteUrl) {
+  throw new Error("Env var VITE_URL does not exists.");
+}
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: viteUrl,
   })
 );
 
