@@ -10,12 +10,14 @@ This project uses node and postgreSQL. So, it is important to check if you alrea
     1. Clone this repository on your machine.
         $ git clone <ssh_key>
 
-    1. On your terminal:
+    2. Open the cloned repository folder
+
+    3. On your terminal:
         $ cd ./frontend (to enter the frontend folder)
         $ npm install (to install all the dependencies)
         $ npm run dev (to check if it running properly)
 
-    2. Pass the Local url provided in the terminal to the VITE_URL Env variable in the backend folder.
+    4. Pass the Local url provided in the terminal to the VITE_URL Env variable in the backend folder.
         ATTENTION: the url must be without "/" in the end!!!!!
 
 ### Starting backend
