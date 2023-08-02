@@ -4,6 +4,16 @@ An application to save your clients contacts and information.
 
 ## Instructions
 
+### Starting frontend
+
+    1. On your terminal:
+        $ cd ./frontend (to enter the frontend folder)
+        $ npm install (to install all the dependencies)
+        $ npm run dev (to check if it running properly)
+
+    2. Pass the Local url provided in the terminal to the VITE_URL Env variable.
+        ATTENTION: the url must be without "/" in the end!!!!!
+
 ### Starting backend
 
     This project uses node and postgreSQL. So, it is important to check if you already have these programs intalled on your machine.
@@ -21,20 +31,13 @@ An application to save your clients contacts and information.
         $ cd ./backend (to enter the backend folder)
         $ npm install (to install all the dependencies)
 
-    5. Populate the .env file with your the required information.
+    5. Populate the .env file with your the required information and run this command:
         $ npm run dev (to check if it is running properly)
 
     6. Migrate all the existent migrations with the following command:
         $ npm run typeorm migration:run -- -d src/data-source
 
-### Starting frontend
-
-    1. On your terminal:
-        $ cd ./frontend (to enter the frontend folder)
-        $ npm install (to install all the dependencies)
-        $ npm run dev (to check if it running properly)
-
-    2. Enter the link provided on the terminal with cntrl + click, register your account and enjoy the app.
+    7. Enter the Local url link provided in the frontend terminal with cntrl + click, register your account and enjoy the app.
 
     OBS: remember to run the backend and frontend simutaneously.
 

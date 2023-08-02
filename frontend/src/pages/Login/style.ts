@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 
 export const StyledMain = styled.main`
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: var(--brand1);
 
   display: flex;
@@ -11,7 +11,7 @@ export const StyledMain = styled.main`
   align-items: center;
 
   h1 {
-    margin-bottom: 10%;
+    margin-bottom: 2rem;
     font-size: 3rem;
     color: var(--grey0);
   }
@@ -24,6 +24,7 @@ export const StyledMain = styled.main`
     border-radius: 0.5rem;
     width: 100%;
     max-width: 30rem;
+    box-sizing: border-box;
   }
 
   form h2 {
