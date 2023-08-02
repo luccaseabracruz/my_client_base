@@ -5,6 +5,10 @@ An application to save your clients contacts and information.
 ## Instructions
 
 ### Starting frontend
+This project uses node and postgreSQL. So, it is important to check if you already have these programs intalled on your machine.
+
+    1. Clone this repository on your machine.
+        $ git clone <ssh_key>
 
     1. On your terminal:
         $ cd ./frontend (to enter the frontend folder)
@@ -16,28 +20,21 @@ An application to save your clients contacts and information.
 
 ### Starting backend
 
-    This project uses node and postgreSQL. So, it is important to check if you already have these programs intalled on your machine.
-
     1. Create a SQL database through PostgreSQL using your terminal:
         $ psql
         $ CREATE DATABASE <your_db_name>;
 
-    2. Fork this repository to your Github
-
-    3. Clone the forked repository on your machine.
-        $ git clone <ssh_key>
-
-    4. On your terminal:
+    2. On your terminal:
         $ cd ./backend (to enter the backend folder)
         $ npm install (to install all the dependencies)
 
-    5. Populate the .env file with your the required information and run this command:
+    3. Populate the .env file with your the required information and run this command:
         $ npm run dev (to check if it is running properly)
 
-    6. Migrate all the existent migrations with the following command:
+    4. Migrate all the existent migrations with the following command:
         $ npm run typeorm migration:run -- -d src/data-source
 
-    7. Enter the Local url link provided in the frontend terminal with cntrl + click, register your account and enjoy the app.
+    5. Enter the Local url link provided in the frontend terminal with cntrl + click, register your account and enjoy the app.
 
     OBS: remember to run the backend and frontend simutaneously.
 
