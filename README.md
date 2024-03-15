@@ -5,6 +5,7 @@ An application to save your clients contacts and information.
 ## Instructions
 
 ### Starting frontend
+
 This project uses node and postgreSQL. So, it is important to check if you already have these programs intalled on your machine.
 
     1. Clone this repository on your machine.
@@ -36,7 +37,10 @@ This project uses node and postgreSQL. So, it is important to check if you alrea
     4. Migrate all the existent migrations with the following command:
         $ npm run typeorm migration:run -- -d src/data-source
 
-    5. Enter the Local url link provided in the frontend terminal with cntrl + click, register your account and enjoy the app.
+    5. Run your database with the command:
+        $ npm run dev
+
+    6. Enter the Local url link provided in the frontend terminal with cntrl + click, register your account and enjoy the app.
 
     OBS: remember to run the backend and frontend simutaneously.
 
